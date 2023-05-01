@@ -405,7 +405,7 @@ local function imgFromClipboard()
     print('get_paste_command: ' .. get_paste_command(pngdir, pngname))
     local result = os.execute(get_paste_command(pngdir, pngname))
      -- print('result: ' .. result)
-    if result then
+    if not result then
         vim.api.nvim_err_writeln(
             string.format(
                 "Unable to write image %s (exit code: ).  Is there an image on the clipboard? ",
