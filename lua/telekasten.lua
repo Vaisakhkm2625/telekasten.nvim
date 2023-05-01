@@ -408,9 +408,8 @@ local function imgFromClipboard()
     if result then
         vim.api.nvim_err_writeln(
             string.format(
-                "Unable to write image %s (exit code: %d).  Is there an image on the clipboard? ",
-                png,
-                result
+                "Unable to write image %s (exit code: ).  Is there an image on the clipboard? ",
+                png
             )
         )
         return
