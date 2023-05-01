@@ -404,7 +404,7 @@ local function imgFromClipboard()
 
     print('get_paste_command: ' .. get_paste_command(pngdir, pngname))
     local result = os.execute(get_paste_command(pngdir, pngname))
-     -- print('restul: ' .. result)
+     print('result: ' .. result)
     if result > 0 then
         vim.api.nvim_err_writeln(
             string.format(
