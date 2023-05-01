@@ -402,7 +402,9 @@ local function imgFromClipboard()
     local png = pngdir .. "/" .. pngname
     local relpath = make_relative_path(vim.fn.expand("%:p"), png, "/")
 
+    print('get_paste_command: ' .. get_paste_command(pngdir, pngname))
     result = os.execute(get_paste_command(pngdir, pngname))
+    print('restul: ' .. result)
     if result > 0 then
         vim.api.nvim_err_writeln(
             string.format(
